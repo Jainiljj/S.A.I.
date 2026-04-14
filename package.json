@@ -6,5 +6,8 @@
     "install": "cd saree-trader-mvp/backend && npm install && cd ../frontend && npm install",
     "build": "cd saree-trader-mvp/frontend && npm run build",
     "start": "cd saree-trader-mvp/backend && node index.js"
+  },
+  "engines": {
+    "node": "20.x"
   }
 }
