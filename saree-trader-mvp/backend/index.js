@@ -3,6 +3,7 @@ const sqlite3 = require('sqlite3').verbose();
 const cors = require('cors');
 const dotenv = require('dotenv');
 const fetch = require('node-fetch');
+const path = require('path');
 
 dotenv.config();
 
@@ -220,6 +221,12 @@ app.get('/api/dashboard', async (req, res) => {
   } catch(err) {
     res.status(500).json({ error: err.message });
   }
+});
+
+// Serve frontend build dynamically
+app.use(express.static(path.join(__dirname, '../frontend/dist')));
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../frontend/dist/index.html'));
 });
 
 const PORT = process.env.PORT || 5000;

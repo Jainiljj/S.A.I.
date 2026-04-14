@@ -2,7 +2,7 @@ import { useState } from 'react';
 import axios from 'axios';
 import { Sparkles, Copy, Check } from 'lucide-react';
 
-const API_BASE = 'http://localhost:5000/api';
+const API_BASE = '/api';
 
 export default function AIPromptTab() {
   const [form, setForm] = useState({ pose: '', color: '', print: '', texture: '' });

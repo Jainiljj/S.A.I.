@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Plus, Minus, PackagePlus, AlertTriangle } from 'lucide-react';
 
-const API_BASE = 'http://localhost:5000/api';
+const API_BASE = '/api';
 
 export default function InventoryTab({ triggerRefresh }) {
   const [items, setItems] = useState([]);

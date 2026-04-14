@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Bell } from 'lucide-react';
 
-const API_BASE = 'http://localhost:5000/api';
+const API_BASE = '/api';
 
 export default function DashboardHeader({ refreshTrigger }) {
   const [stats, setStats] = useState({ totalOutstanding: 0, lowStockCount: 0 });
