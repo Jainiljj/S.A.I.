@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Deployment root for SAI Saree Trader",
   "scripts": {
-    "install": "cd saree-trader-mvp/backend && npm install && cd ../frontend && npm install",
+    "install": "cd saree-trader-mvp/backend && npm install --build-from-source sqlite3 && npm install && cd ../frontend && npm install",
     "build": "cd saree-trader-mvp/frontend && npm run build",
     "start": "cd saree-trader-mvp/backend && node index.js"
   },
